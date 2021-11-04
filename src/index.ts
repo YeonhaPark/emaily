@@ -1,11 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
-import { authRoutes } from "./src/routes/authRoutes";
-import { mongoURI, cookieKey } from "./keys";
+import { authRoutes } from "./routes/authRoutes";
+import { mongoURI, cookieKey } from "../keys";
 import cookieSession from "cookie-session"; // give access to cookie
 import passport from "passport"; // tell passport to use cookie
-import "./src/models/User";
-import "./src/services/passport";
+import "./models/User";
+import "./services/passport";
 
 mongoose.connect(mongoURI);
 const app = express();
