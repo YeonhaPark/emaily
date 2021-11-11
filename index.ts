@@ -1,12 +1,14 @@
 import express from "express";
 import passport from "passport";
 import mongoose from "mongoose";
+import dotenv from 'dotenv';
 import { authRoutes } from "./routes/authRoutes";
 import { mongoURI, cookieKey } from "./config/keys";
 import cookieSession from "cookie-session"; // give access to cookie
 import "./models/User";
 import "./services/passport"; // 항상 models/User뒤에!
 
+dotenv.config();
 mongoose.connect(mongoURI);
 const app = express();
 mongoose.connection.on("connected", () => {
