@@ -20,6 +20,7 @@ passport.use(
       clientID: googleClientId,
       clientSecret: googleClientSecret,
       callbackURL: "/auth/google/callback",
+      proxy: true,
     },
     (accessToken: string, refreshToken: string, profile: any, done: any) => {
       console.log({accessToken, refreshToken, profile, done})
