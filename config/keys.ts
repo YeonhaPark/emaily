@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+if (process.env.NODE_ENV !== "production") dotenv.config();
+
 let googleClientId: string, googleClientSecret: string, mongoURI: string, cookieKey: string;
 
 googleClientId = process.env.GOOGLE_CLIENT_ID || '';
