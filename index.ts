@@ -7,6 +7,7 @@ import cookieSession from "cookie-session"; // give access to cookie
 import "./models/User";
 import "./services/passport"; // 항상 models/User뒤에!
 
+// mongoose와 express 앱 연결
 mongoose.connect(mongoURI);
 const app = express();
 mongoose.connection.on("connected", () => {

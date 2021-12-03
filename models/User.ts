@@ -6,4 +6,4 @@ const userSchema = new Schema({
   googleId: String,
 });
 
-mongoose.model("users", userSchema); // create new collection called users
+mongoose.model("users", userSchema); // create new collection called users. mongoose에 올림
